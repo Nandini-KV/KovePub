@@ -36,6 +36,9 @@ public class UserCreatedEventPublisher {
         UserResponse userResponse = new ObjectMapper().readValue(json, UserResponse.class);
 
         CreateUserMessage createUserMessage = new CreateUserMessage(userResponse);
+
+
+
         messagePublisher.publish(createUserMessage);
 
         return new ResponseEntity<>("Published.", HttpStatus.OK);

@@ -7,4 +7,5 @@ import org.springframework.messaging.Message;
 @MessagingGateway(defaultRequestChannel = "userProfileUpdatesChannel")
 public interface OutboundCdpGateway {
   void sendMessage(Message<String> message);
+  
 }
